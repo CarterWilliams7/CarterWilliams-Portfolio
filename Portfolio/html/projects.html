@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/css/projects.css"></link>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+        <div class="projects-main">
+        <div class="title-projects">
+            <h1>Projects</h1>
+            <p>Click on any project to view more details</p>
+        </div>
+        <div id="grid-projects" class="grid-projects"> <!--3x3 grid with buttons that act as cards to be clicked on-->
+        
+        </div>
+
+        <div class="project-modal" id="project-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modal-title">Title</h2>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-details">details</p>
+                <button class="close" id="close-button">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="/java/loadProjects.js"></script>
+    <script>
+        fetch('/html/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

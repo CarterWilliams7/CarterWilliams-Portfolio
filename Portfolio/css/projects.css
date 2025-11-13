@@ -1,0 +1,25 @@
+.grid-projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    vertical-align: center;
+    justify-items: center;
+}
+.project-card img{
+width: 400px;
+height: 250px;
+}
+.item-details{
+    text-align: center;
+    justify-items: center;
+}
+.title-projects{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.project-modal{
+    border-style: solid;
+    border-width: 4px;
+    text-align: center;
+    justify-items: center;
+}
