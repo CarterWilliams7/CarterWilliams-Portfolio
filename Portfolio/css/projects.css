@@ -1,25 +1,67 @@
-.grid-projects{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    vertical-align: center;
-    justify-items: center;
-}
-.project-card img{
-width: 400px;
-height: 250px;
-}
-.item-details{
-    text-align: center;
-    justify-items: center;
+
+body{
+    scroll-behavior: smooth;
 }
 .title-projects{
     text-align: center;
     margin-bottom: 40px;
 }
-.project-modal{
-    border-style: solid;
-    border-width: 4px;
+/* Main Project Cards */
+.grid-projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+.project-card img{
+    width: 400px;
+    height: 250px;
+}
+.project-card{
+    width: 400px;
+    height: fit-content;
+}
+.item-details{
     text-align: center;
     justify-items: center;
+}
+/* Modal */
+.project-modal{
+    padding: 25px;
+    border-style: solid black;
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 4px;
+    z-index: 100;
+}
+.modal-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 5px;
+}
+.project-modal-image{
+    height: 200px;
+    width: 400px;
+}
+.kanban-modal-image{
+    height: 400px;
+    width: 400px;
+}
+/* Buttons */
+.close{
+    border-style: none;
+    font-size: 24px;
+    background-color: red;
+    color: black;
+    padding: 10px; 
 }

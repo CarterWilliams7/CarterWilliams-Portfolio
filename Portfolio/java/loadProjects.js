@@ -10,14 +10,24 @@ depending entirely on the hardcoded data in the list.
 const projects = [
     {
         title: "KanBan Application",
-        imageSrc: ["/images/kanban.png", "/images/kanban2.png"],
+        imageSrc: ["/images/kanban.png", "/images/kanban2.png", "/images/kanban3.png", "/images/kanban4.png", "/images/kanban5.png"],
         details: "<p>A web-based KanBan application built using JavaScript, HTML, and CSS. It allows users to create, edit, and manage tasks in a visual board format.</p><ul><li>Implemented drag-and-drop functionality for task management.</li><li>Used local storage to save user data.</li><li>Responsive design for mobile and desktop use.</li></ul>"
     },
     {
-        title: "Project Two",
-        imageSrc: ["/images/blackjack.png"],
-        details: "<p>Description of Project Two.</p><ul><li>Feature one.</li><li>Feature two.</li></ul>"
+        title: "Blackjack Game",
+        imageSrc: ["/images/blackjack.png", "/images/blackjack2.png", "/images/blackjack3.png", "/images/blackjack4.png", "/images/blackjack5.png", "/images/blackjack6.png", "/images/blackjack7.png"],
+        details: "<p>This project was completed using Unity 2D utilizing C# as the main programming language. The project is a"
+        + " realistic Blackjack game that contains all the real rules of regular Blackjack.</p><ul><li>Tutorial that explains icons," 
+        +" rules of blackjack, and features of my game.</li><li>Split the cards only if the player has two cards of the same value.</li>" + 
+        "<li>Change bet and double mid hand to potentially increase payout</li><li>Real Blackjack rules and payout system with options to push, win, win by a dealt blackjack, and lose.</li></ul>"
+    },{
+        title: "Volunteer and Event Management System",
+        imageSrc: ["/images/tv.png", "/images/tv2.png", "/images/tv3.png", "/images/tv4.png", "/images/tv5.png", "/images/tv6.png", "/images/tv7.png"],
+        details: "<p>INFORMATION<ui><li>d</li>"
+        +"<li>s</li>" + 
+        "<li>g</li></ui>></p>"
     }
+
 ]
 
 const projectList = document.getElementById("grid-projects");
@@ -42,31 +52,45 @@ projects.forEach((project, index) => {
 const modal = document.getElementById("project-modal");
 modal.style.display = "none";
 const modalTitle = document.getElementById("modal-title");
-const modalImage = document.getElementById("modal-image");
 const modalDetails = document.getElementById("modal-details");
+const modalImages = document.getElementById("modal-images");
+const body = document.body;
 const closeBtn = document.getElementById("close-button");
 
 //Add click listeners to all project detail buttons
 document.querySelectorAll(".details-btn").forEach(button => {
     button.addEventListener("click", () => {
+        //Clear previous content
+        modalImages.innerHTML = "";
         modalDetails.innerHTML = "";
-        modal.style.display = "flex";
+        modal.style.display = "block";
+        modal.style.justifyContent = "center";
+        modal.style.textAlign = "center";
         //Determine which project was clicked
         const index = button.getAttribute("data-index");
         const project = projects[index];
-        modalTitle.innerText = project.title;
+        modalTitle.innerHTML = project.title;
         modalDetails.innerHTML = project.details;
-
+        body.style.backgroundColor = "rgba(31, 30, 30, 0.5)";
         //Display each image in the list of images
-        for(let i = 0; i < project.imageSrc.length; i++) {
+    
+        for(let i = 1; i < project.imageSrc.length; i++) {
             const img = document.createElement("img");
             img.src = project.imageSrc[i];
-            modalImage.appendChild(img);
-        }       
+            img.alt = `${project.title} Image ${i + 1}`;
+            if(modalTitle.innerHTML === "KanBan Application")
+                img.classList.add("kanban-modal-image");
+            else
+                img.classList.add("project-modal-image");
+            
+            modalImages.appendChild(img);
+        }
     });
 });
-
 //Close modal
+//TODO: CHANGE BACKGROUND COLOR
 closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
+    modal.style.display = "none";
+    body.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+
 });

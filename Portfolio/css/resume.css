@@ -1,0 +1,11 @@
+body{
+    font-size: 18px;
+}
+
+.section-skills{
+    display: flex;
+    gap: 100px;
+}
+.skills-type, .skills-list{
+    padding: 10px;
+}

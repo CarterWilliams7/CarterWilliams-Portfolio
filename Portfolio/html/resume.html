@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+    <link rel="stylesheet" href="/css/resume.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="header">
+        <h1>Carter Williams</h1>
+    </div>
+    <h3>Skills</h3>
+    <div class="section-skills">
+        <div class="skills-type">
+            <p>Front End</p>
+            <p>Back End</p>
+            <p>Database Management</p>
+        </div>
+        <div class="skills-list">
+            <p>HTML/CSS, JavaScript, TypeScript</p>
+            <p>Python, Java, C#, Node.js, .NET, .NET MVC</p>
+            <p>SQL, SSMS, SQLite, MySQL, MongoDB, SSIS, T-SQL, R</p>
+        </div>
+    </div>
+    <div class="section-education">
+        <h3>Education</h3>
+        <div class="eductation-item">
+            <p><strong>Niagara College</strong></p>
+            <p>Advanced Diploma in Computer Programming and Analytics</p>
+            <p>Expected Completion: Dec. 2025</p>
+        </div>
+    </div>
+    <div class="section-work">
+        <h3>Work Experience</h3>
+        <div class="work-item">
+            <p><strong>IT Helpdesk Assistant - Walker Industries</strong></p>
+            <p>May 2025 - Aug. 2025</p>
+            <ul>
+                <li>Assisted in maintaining and troubleshooting computer systems and networks.</li>
+                <li>Provided technical support to staff and students.</li>
+                <li>Helped with software installations and updates.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-header">
+        <h3>Experience</h3>
+    </div>
+
+     <script>
+        fetch('/html/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
