@@ -41,7 +41,7 @@ projects.forEach((project, index) => {
         <img class="project-image" src="${project.imageSrc[0]}" alt="${project.title} Image">
         <div class="item-details">
         <h2>${project.title}</h2>
-        <button class="details-btn" data-index="${index}">View Details</button>
+        <button class="btn-details" data-index="${index}">View Details</button>
         </div>`;
           console.log(`Card created for ${project.title}:`, card.querySelector("img").src);
 
@@ -58,7 +58,7 @@ const body = document.body;
 const closeBtn = document.getElementById("close-button");
 
 //Add click listeners to all project detail buttons
-document.querySelectorAll(".details-btn").forEach(button => {
+document.querySelectorAll(".btn-details").forEach(button => {
     button.addEventListener("click", () => {
         //Clear previous content
         modalImages.innerHTML = "";
@@ -71,17 +71,15 @@ document.querySelectorAll(".details-btn").forEach(button => {
         const project = projects[index];
         modalTitle.innerHTML = project.title;
         modalDetails.innerHTML = project.details;
-        body.style.backgroundColor = "rgba(31, 30, 30, 0.5)";
+        body.style.backgroundColor = "#1c0281";
+        body.style.overflow = "hidden";
         //Display each image in the list of images
     
         for(let i = 1; i < project.imageSrc.length; i++) {
             const img = document.createElement("img");
             img.src = project.imageSrc[i];
             img.alt = `${project.title} Image ${i + 1}`;
-            if(modalTitle.innerHTML === "KanBan Application")
-                img.classList.add("kanban-modal-image");
-            else
-                img.classList.add("project-modal-image");
+            img.classList.add("project-modal-image");
             
             modalImages.appendChild(img);
         }
@@ -91,6 +89,6 @@ document.querySelectorAll(".details-btn").forEach(button => {
 //TODO: CHANGE BACKGROUND COLOR
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
-    body.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-
+    body.style.backgroundColor = "rgba(0, 0, 0, 1)";
+    body.style.overflow = "auto";
 });
