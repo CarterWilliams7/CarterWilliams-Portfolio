@@ -1,0 +1,38 @@
+h1, h2, h3{
+    text-align: center;
+    padding-bottom: 1rem;;
+}
+label{
+    font-weight: bold;
+    font-size: large;
+}
+li{
+    margin-bottom: 0.5rem;
+}
+.resume-main{
+    
+    margin: 1rem;
+}
+.section-skills{
+    display: flex;
+    gap: 2rem;
+}
+@media (min-width: 1024px){
+    body{
+        font-size: 18px;
+    }
+    .resume-main{
+        margin: 20rem;
+        margin-top: 0;
+    }
+    .section-skills{
+        display: flex;
+        gap: 8rem;
+    }
+    .section-education{
+
+    }
+    .header{
+        text-align: center;
+    }
+}
