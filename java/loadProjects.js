@@ -11,7 +11,11 @@ const projects = [
     {
         title: "KanBan Application",
         imageSrc: ["/CarterWilliams-Portfolio/images/kanban.png", "/CarterWilliams-Portfolio/images/kanban2.png", "/CarterWilliams-Portfolio/images/kanban3.png", "/CarterWilliams-Portfolio/images/kanban4.png", "/CarterWilliams-Portfolio/images/kanban5.png"],
-        details: "<p>A web-based KanBan application built using JavaScript, HTML, and CSS. It allows users to create, edit, and manage tasks in a visual board format.</p><ul><li>Implemented drag-and-drop functionality for task management.</li><li>Used local storage to save user data.</li><li>Responsive design for mobile and desktop use.</li></ul>"
+        details: "<p>A mobile KanBan application built using only Java. This applications allows users to manage projects by creating"
+        + " custom boards, lists, and cards to organize their workflow. Users can easily add, edit and delete tasks from the list, and can"
+       + " save the entire board at any point in time.</p><ul><li>Implemented drag-and-drop functionality for task management.</li>"
+       +"<li>Used local storage to save user data.</li><li>Responsive design for mobile and desktop use.</li>"
+       +"<li>Easy default label option for a quick-start on projects</li></ul>"
     },
     {
         title: "Blackjack Game",
@@ -24,11 +28,12 @@ const projects = [
         title: "Volunteer and Event Management System",
         imageSrc: ["/CarterWilliams-Portfolio/images/tv.png", "/CarterWilliams-Portfolio/images/tv2.png", "/CarterWilliams-Portfolio/images/tv3.png", "/CarterWilliams-Portfolio/images/tv4.png", "/CarterWilliams-Portfolio/images/tv5.png", "/CarterWilliams-Portfolio/images/tv6.png", "/CarterWilliams-Portfolio/images/tv7.png"],
         details: "<p>This application was designed for Tomorrow's Voices volunteer organization. The application has five pre-made accounts each"
-        + " and each account has different restrictions and access. This program was built using C# with an MVC approach and using SQLite,"
+        + " and each account has different restrictions and access. This program was built using C# with an MVC approach and utilizing SQLite,"
         + " javaScript, boostrap and css. The code is available online, and this project was completed with a team of five programmers."
-        + "<ui><li>Account restrictions depending on the hierarchy of the company</li>"
+        + "</p><ui><li>Account restrictions depending on the hierarchy of the user</li>"
         +"<li>Can convert excel sheets to sql data, uploading a sheet of volunteers will allow you to add lots of volunteers at once</li>" + 
-        "<li>f </li></ui>></p>"
+        "<li>Simple filter and sorting on every page in the app</li>" +
+        "<li>Dashboard containing the user's most common actions</li></ui>"
     }
 
 ]
