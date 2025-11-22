@@ -10,22 +10,30 @@ depending entirely on the hardcoded data in the list.
 const projects = [
     {
         title: "KanBan Application",
-        imageSrc: ["/images/kanban.png", "/images/kanban2.png", "/images/kanban3.png", "/images/kanban4.png", "/images/kanban5.png"],
-        details: "<p>A web-based KanBan application built using JavaScript, HTML, and CSS. It allows users to create, edit, and manage tasks in a visual board format.</p><ul><li>Implemented drag-and-drop functionality for task management.</li><li>Used local storage to save user data.</li><li>Responsive design for mobile and desktop use.</li></ul>"
+        imageSrc: ["/CarterWilliams-Portfolio/images/kanban.png", "/CarterWilliams-Portfolio/images/kanban2.png", "/CarterWilliams-Portfolio/images/kanban3.png", "/CarterWilliams-Portfolio/images/kanban4.png", "/CarterWilliams-Portfolio/images/kanban5.png"],
+        details: "<p>A mobile KanBan application built using only Java. This applications allows users to manage projects by creating"
+        + " custom boards, lists, and cards to organize their workflow. Users can easily add, edit and delete tasks from the list, and can"
+       + " save the entire board at any point in time.</p><ul><li>Implemented drag-and-drop functionality for task management.</li>"
+       +"<li>Used local storage to save user data.</li><li>Responsive design for mobile and desktop use.</li>"
+       +"<li>Easy default label option for a quick-start on projects</li></ul>"
     },
     {
         title: "Blackjack Game",
-        imageSrc: ["/images/blackjack.png", "/images/blackjack2.png", "/images/blackjack3.png", "/images/blackjack4.png", "/images/blackjack5.png", "/images/blackjack6.png", "/images/blackjack7.png"],
+        imageSrc: ["/CarterWilliams-Portfolio/images/blackjack.png", "/CarterWilliams-Portfolio/images/blackjack2.png", "/CarterWilliams-Portfolio/images/blackjack3.png", "/CarterWilliams-Portfolio/images/blackjack4.png", "/CarterWilliams-Portfolio/images/blackjack5.png", "/CarterWilliams-Portfolio/images/blackjack6.png", "/CarterWilliams-Portfolio/images/blackjack7.png"],
         details: "<p>This project was completed using Unity 2D utilizing C# as the main programming language. The project is a"
         + " realistic Blackjack game that contains all the real rules of regular Blackjack.</p><ul><li>Tutorial that explains icons," 
         +" rules of blackjack, and features of my game.</li><li>Split the cards only if the player has two cards of the same value.</li>" + 
         "<li>Change bet and double mid hand to potentially increase payout</li><li>Real Blackjack rules and payout system with options to push, win, win by a dealt blackjack, and lose.</li></ul>"
     },{
         title: "Volunteer and Event Management System",
-        imageSrc: ["/images/tv.png", "/images/tv2.png", "/images/tv3.png", "/images/tv4.png", "/images/tv5.png", "/images/tv6.png", "/images/tv7.png"],
-        details: "<p>INFORMATION<ui><li>d</li>"
-        +"<li>s</li>" + 
-        "<li>g</li></ui>></p>"
+        imageSrc: ["/CarterWilliams-Portfolio/images/tv.png", "/CarterWilliams-Portfolio/images/tv2.png", "/CarterWilliams-Portfolio/images/tv3.png", "/CarterWilliams-Portfolio/images/tv4.png", "/CarterWilliams-Portfolio/images/tv5.png", "/CarterWilliams-Portfolio/images/tv6.png", "/CarterWilliams-Portfolio/images/tv7.png"],
+        details: "<p>This application was designed for Tomorrow's Voices volunteer organization. The application has five pre-made accounts each"
+        + " and each account has different restrictions and access. This program was built using C# with an MVC approach and utilizing SQLite,"
+        + " javaScript, boostrap and css. The code is available online, and this project was completed with a team of five programmers."
+        + "</p><ui><li>Account restrictions depending on the hierarchy of the user</li>"
+        +"<li>Can convert excel sheets to sql data, uploading a sheet of volunteers will allow you to add lots of volunteers at once</li>" + 
+        "<li>Simple filter and sorting on every page in the app</li>" +
+        "<li>Dashboard containing the user's most common actions</li></ui>"
     }
 
 ]
